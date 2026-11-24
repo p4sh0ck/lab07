@@ -11,7 +11,7 @@ on:
       - main
 env:
   DOTNET_VERSION: 10.0.x
-  PROJECT_PATH: ./Lab07/Lab07.csproj
+  PROJECT_PATH: ./lab07/Lab07/Lab07.csproj
 
 jobs:
   build:
@@ -22,6 +22,8 @@ jobs:
         shell: bash
         run: echo "Runner is ready"
       - name: Checkout repository
+        shell: bash
+        run: bash scripts/check-repository.sh "$PROJECT_PATH"
         uses: actions/checkout@v4
       - name: Setup .NET
         uses: actions/setup-dotnet@v4

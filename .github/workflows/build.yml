@@ -24,7 +24,6 @@ jobs:
       - name: Checkout repository
         shell: bash
         run: bash scripts/check-repository.sh "$PROJECT_PATH"
-        uses: actions/checkout@v4
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
